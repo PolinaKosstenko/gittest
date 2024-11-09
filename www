@@ -1,0 +1,103 @@
+from tkinter import *
+import calendar
+
+root = Tk()
+# root.geometry("400x300")
+root.title("Calendar")
+
+# Function
+
+def text():
+    month_int = int(month.get())
+    year_int = int(year.get())
+    cal = calendar.month(year_int, month_int)
+    textfield.delete(0.0, END)
+    textfield.insert(INSERT, cal)
+
+
+# Creating Labels
+label1 = Label(root, text="Month:")
+label1.grid(row=0, column=0)
+
+label2 = Label(root, text="Year:")
+label2.grid(row=0, column=1)
+
+# Creating spinbox
+month = Spinbox(root, from_=1, to=12, width=8)
+month.grid(row=1, column=0, padx=5)
+from tkinter import *
+import calendar
+
+root = Tk()
+# root.geometry("400x300")
+root.title("Calendar")
+
+# Function
+
+def text():
+    month_int = int(month.get())
+    year_int = int(year.get())
+    cal = calendar.month(year_int, month_int)
+    textfield.delete(0.0, END)
+    textfield.insert(INSERT, cal)
+
+
+# Creating Labels
+label1 = Label(root, text="Month:")
+label1.grid(row=0, column=0)
+
+label2 = Label(root, text="Year:")
+label2.grid(row=0, column=1)
+
+# Creating spinbox
+month = Spinbox(root, from_=1, to=12, width=8)
+month.grid(row=1, column=0, padx=5)
+from tkinter import *
+import calendar
+
+root = Tk()
+# root.geometry("400x300")
+root.title("Calendar")
+
+# Function
+
+def text():
+    month_int = int(month.get())
+    year_int = int(year.get())
+    cal = calendar.month(year_int, month_int)
+    textfield.delete(0.0, END)
+    textfield.insert(INSERT, cal)
+
+
+# Creating Labels
+label1 = Label(root, text="Month:")
+label1.grid(row=0, column=0)
+
+label2 = Label(root, text="Year:")
+label2.grid(row=0, column=1)
+
+# Creating spinbox
+month = Spinbox(root, from_=1, to=12, width=8)
+month.grid(row=1, column=0, padx=5)
+def main():
+    # Get the input
+    number = input("Enter a number to calculate: ")
+    try:
+        number = float(number)
+    except ValueError:
+        print("Error: Could not convert to integer.")
+        print("Only numbers (e.g. 42) can be entered as input.")
+        main()
+
+    # Prevent any invalid inputs
+    if number <= 0:
+        print("Error: Numbers zero and below are not calculable.")
+        main()
+    if number == math.inf:
+        print("Error: Infinity is not calculable.")
+        main()
+
+    # Confirmation before beginning
+    print("Number is:", number)
+    input("Press ENTER to begin.")
+    print("\nBEGIN COLLATZ SEQUENCE")
