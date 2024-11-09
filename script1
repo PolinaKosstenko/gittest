@@ -1,0 +1,12 @@
+ def back(self, steps: int) -> str:
+        """
+        Returns - str
+        Input - int
+        ----------
+        - Iterates through the DLL backwards `step` number of times
+        - returns the appropriate value
+        """
+        while steps > 0 and self.curr.prev:
+            self.curr = self.curr.prev
+            steps -= 1
+        return self.curr.val
