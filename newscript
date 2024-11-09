@@ -1,0 +1,9 @@
+from itertools import product
+
+
+def findPassword(chars, function, show=50, format_="%s"):
+
+    password = None
+    attempts = 0
+    size = 1
+    stop = False
